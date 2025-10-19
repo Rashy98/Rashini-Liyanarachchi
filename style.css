@@ -1,0 +1,386 @@
+/* ===== Global ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #222;
+    background-color: #fafafa;
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* ===== Header ===== */
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .hero h1 {
+    font-weight: 600;
+    font-size: 1.9rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+  }
+  
+  .subtitle {
+    font-weight: 400;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .tagline {
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  /* ===== Navigation ===== */
+  nav {
+    margin-top: 1rem;
+  }
+  
+  nav a {
+    color: #444;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  nav a.active {
+    color: #000;
+    font-weight: 600;
+  }
+  
+  nav a:hover {
+    color: #000;
+  }
+  
+  /* ===== Main ===== */
+  main {
+    max-width: 750px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+  
+  p, li {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li::before {
+    content: "– ";
+    color: #aaa;
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+  }
+  
+  footer a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    transition: border-color 0.2s;
+  }
+  
+  footer a:hover {
+    border-color: #000;
+  }
+  
+  /* ===== Top Navigation (Name + Nav) ===== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .topbar .name a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+  }
+  
+  .topbar nav a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .topbar nav a:hover,
+  .topbar nav a.active {
+    color: #000;
+  }
+  
+  /* ===== Page Header ===== */
+  .page-header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    background: #fafafa;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-header p {
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  /* ===== Projects ===== */
+  .content {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  .project {
+    margin-bottom: 3rem;
+  }
+  
+  .project h2 {
+    font-size: 1.4rem;
+    color: #111;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project p {
+    color: #333;
+    line-height: 1.7;
+  }
+  
+  /* ===== Publications Page ===== */
+.pubs-container {
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .pub-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    transition: all 0.25s ease;
+  }
+  
+  .pub-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+  
+  .pub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .pub-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #111;
+  }
+  
+  .pub-title:hover {
+    text-decoration: underline;
+  }
+  
+  .pub-year {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .pub-authors {
+    margin: 0.3rem 0;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  
+  .pub-venue {
+    color: #777;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  
+  /* ===== CV Page ===== */
+.cv-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  iframe {
+    border: none;
+  }
+  
+  .cv-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #007aff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .cv-button:hover {
+    background: #005ecb;
+  }
+
+  .social-links {
+    margin: 1.2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .social-links a {
+    color: #333;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    color: #0070f3;
+    transform: scale(1.2);
+  }
+  
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .gallery-item {
+    text-align: center;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.03);
+  }
+  
+  .gallery-item p {
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+    color: #555;
+  }
+  
+  
+  .contact-page {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .contact-page h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #1e1e1e;
+  }
+
+  .contact-page p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-item a {
+    color: #005ecb;
+    text-decoration: none;
+    margin-top: 0.3rem;
+    word-break: break-word;
+  }
+
+  .contact-item i {
+    margin-right: 0.5rem;
+    color: #f39c12;
+  }
